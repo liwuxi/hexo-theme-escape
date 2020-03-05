@@ -1,0 +1,38 @@
+basic:
+  avatar: '/images/default_avatar.png'
+  keywords: hexo,theme,escape
+  favicon:
+    ico:
+    apple_touch_icon:
+    safari_pinned_tab:
+
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+  Tags: /tags
+  Categories: /categories
+  Friend: /links
+
+testimg: '/images/escape-banner.jpg'
+
+
+social:
+  Github:
+    url: https://github.com/liwuxi
+    icon:
+  E-Mail:
+    url: mailto:im@xiwu.li
+    icon: icon-email
+  Rss:
+    url: /atom.xml
+    icon: icon-rss
+
+
+
+language: en
+
+footer:
+  copyright_since: 2016
+  custom_text: 
+    - '<a href="http://www.miitbeian.gov.cn" rel="nofollow">京ICP备15042817号-2</a>'

@@ -1,0 +1,18 @@
+<header id="header">
+    <div id="site-branding">
+        <a href="<%- url_for() %>">
+            <!-- <img class="site-logo" src="https://img.perdel.cn/avatar.png" alt="blog-logo" /> -->
+            <h1 class="site-title"><%= config.title %></h1>
+            <p class="site-description"> <%= config.description %> </p>
+        </a>
+    </div>
+    <nav id="navBar">
+        <ul class="menu">
+            <% for (name in theme.menu) { %>
+            <li class="menu-item">
+                <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"><%- name %></a>
+            </li>
+            <% } %>
+        </ul>
+    </nav>
+</header>

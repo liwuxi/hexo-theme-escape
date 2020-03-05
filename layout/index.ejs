@@ -1,0 +1,31 @@
+<section>
+  <% page.posts.each(function (post) { %>
+    <article class="posts">
+      <!-- <a>
+        <img src="<%- theme.testimg %>" class="post-thumbnail"></img>
+      </a> -->
+      <div class="post-thumbnail" style="background-image: url('<%- theme.testimg %>');">
+        <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+      </div>
+      <div class="post-content">
+        <%- post.more.replace(/<\/?.+?\/?>/g, "").substring(0, 100) %>
+        <!-- <%- post.more %> -->
+        <span class="post-link"><a href="<%- url_for(post.path) %>">>> <%- __('Posts.More') %></a></span>
+        <div class="post-footer">
+          <div class="post-info">
+            <img class="avatar" src="<%- theme.basic.avatar -%>"></img>
+            <span class="post-label"><%- date(post.date, "YYYY-MM-DD") %></span>
+          </div>
+          <div class="post-category">
+            <%- list_categories(post.categories, {
+              show_count: false,
+              class: 'post_category',
+              style: 'none'
+            }) %>
+          </div>
+        </div>
+      </div>
+    </article>
+  <% }) %>
+</section>
+<%- partial('_partial/paginator') %>
