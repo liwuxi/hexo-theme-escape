@@ -4,15 +4,17 @@
     <%- partial('_partial/head') %>
   </head>
   <body>
-    <%- partial('_partial/header') %>
+    <% if (is_post()) { %>
+      <%- partial('_partial/post-header') %>
+    <% } else { %>
+      <%- partial('_partial/header') %>
+    <% } %>
     <main id="main">
       <%- body %>
     </main>
-    <% if (!is_archive()) { %>
+    <!-- <% if (!is_archive()) { %>
       <%- partial('_partial/footer') %>
-    <% } %>
-    <!-- <footer>
-      <%- partial('_partial/footer') %>
-    </footer> -->
+    <% } %> -->
+    <%- partial('_partial/footer') %>
   </body>
 </html>

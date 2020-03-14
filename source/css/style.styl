@@ -1,6 +1,13 @@
+@import "_partial/header";
+@import "_partial/index";
+@import "_partial/paginator"
+@import "_partial/footer"
+@import "_partial/post"
+
 * {
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease;
 }
 
 body {
@@ -11,8 +18,8 @@ body {
 }
 
 #main {
-  width: 750px;
-  margin: 50px auto;
+  // width: 750px;
+  // margin: 50px auto;
 }
 
 .container {
@@ -21,7 +28,6 @@ body {
 }
 
 a {
-  color: 0070FF;
   text-decoration: none;
 }
 
@@ -31,6 +37,3 @@ hr {
   color: gray;
   margin: 5px 0;
 }
-
-@import "_partial/header";
-@import "_partial/post";

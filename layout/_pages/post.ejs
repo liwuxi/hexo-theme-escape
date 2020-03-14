@@ -1,0 +1,24 @@
+<div id="artical-banner" style="background: url('<%- page.thumbnail %>') center/cover;">
+  <div class="artical-info">
+      <div>
+        <h1 class="artical-title"><%= page.title %></h1>
+        <span>
+            <% page.categories.forEach(function(category, index) { %>
+                <a href='<%= url_for(category.path) %>'><%= category.name %></a>
+            <% }); %>
+        </span>
+        <span><%- date(page.date, "YYYY-MM-DD") %></span>
+        <span>22 条评论</span>
+      </div>
+  </div>
+</div>
+<article>
+  <%- page.content %>
+  <div class="artical-footer">
+    <img src="<%- theme.basic.avatar %>" alt="Author avatar">
+    <div class="artical-footer-text">
+      <p><%- config.author %></p>
+      <p><%- theme.license %></p>
+    </div>
+  </div>
+</article>

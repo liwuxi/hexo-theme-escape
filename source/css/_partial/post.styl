@@ -1,57 +1,63 @@
-font-color = #ACB3C2;
+// Post Header Style
+.artical-header
+	position absolute
+	margin 30px 0 0 30px
+	
+// Artical Style
+#artical-banner
+	width 100%
+	height 500px
+	color white
 
-.posts
-  // border: 1px solid red;
-  margin: 3em 0;
-  background:white;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
-  border-radius: 15px;
-  font-size: 15px;
-  &:hover
-    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1);
-    transform: translateY(-1px);
-    transition: all 0.2s linear;
+	a
+		color white
 
-  .post-thumbnail
-    width: 100%;
-    height: 200px;
-    border-radius: 15px 15px 0 0;
-    padding: 20px;
+	.artical-info
+		display flex
+		align-items center
+		height 500px
+		width 720px
+		margin 0 auto
 
-    box-sizing: border-box;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: row;
-    align-items: flex-end;
-    background-size: cover;
+		font-size 14px
+		text-shadow 0 2px 3px black
 
-    .post-title
-        font-size: 20px;
-        color: white;
-        // text-shadow: 
+		.artical-title
+			font-size 56px
 
-  .post-content
-    padding: 20px;
+		span:not(:last-child):after
+			content "\00a0/\00a0"
 
-    .post-footer
-      height: 24px;
-      display: flex;
-      align-items: center;
-      margin-top: 15px;
-      justify-content: space-between;
+main > article
+	width 640px
+	margin 0 auto
+	padding 50px 40px
 
-      .post-info
-        display: flex;
-        align-items: center;
-        
-        .avatar
-          width: 24px;
-          height 24px;
-          border-radius: 50%;
-          margin-right: 10px;
+	position relative
+	top -100px
 
-      .post-label
-        color: font-color;
+	font-size 16px
 
-      .post-category
-        color: red;
+	color black
+	background-color white
+	box-shadow 0px 20px 40px rgba(0, 0, 0, 0.1)
+	border-radius 30px
+
+	.artical-footer
+		width 600px
+		height 65px
+		margin 50px auto 0
+		background rgba(0, 0, 0, 0.05)
+		box-shadow inset 0px 1px 2px rgba(0, 0, 0, 0.05)
+		border-radius 20px
+		
+		font-size 13px
+
+		display flex
+		align-items center
+
+		img
+			width 35px
+			height 35px
+			border-radius 50%
+			margin 0 10px 0 20px
