@@ -11,7 +11,7 @@ menu:
   Archives: /archives
   About: /about
   Tags: /tags
-  Categories: /categories
+  Category: /categories
   Friend: /links
 
 testimg: '/images/escape-banner.jpg'
@@ -36,3 +36,6 @@ footer:
   copyright_since: 2016
   custom_text: 
     - '<a href="http://www.miitbeian.gov.cn" rel="nofollow">京ICP备15042817号-2</a>'
+
+
+license: '本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议'
