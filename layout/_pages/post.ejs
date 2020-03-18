@@ -17,8 +17,12 @@
   <div class="artical-footer">
     <img src="<%- theme.basic.avatar %>" alt="Author avatar">
     <div class="artical-footer-text">
-      <p><%- config.author %></p>
+      <p>
+        <%- config.author %>
+      </p>
       <p><%- theme.license %></p>
     </div>
   </div>
 </article>
+<%- partial('_partial/post-paginator') %>
+<%- partial('_partial/discussion') %>
