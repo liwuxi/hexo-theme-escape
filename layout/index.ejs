@@ -1,34 +1,9 @@
-<section>
-  <!-- Post List -->
-  <% page.posts.each(function (post) { %>
-    <article class="posts">
-      <div class="post-thumbnail" style="background-image: url('<%- post.thumbnail %>');">
-        <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
-      </div>
-      <div class="post-content">
-        <%- post.more.replace(/<\/?.+?\/?>/g, "").substring(0, 100) %>
-        <!-- <%- post.more %> -->
-        <span class="post-link"><a href="<%- url_for(post.path) %>">>> <%- __('Posts.More') %></a></span>
-        <div class="post-footer">
-          <div class="post-info">
-            <img class="avatar" src="<%- theme.basic.avatar %>"></img>
-            <span class="post-label"><%- date(post.date, "YYYY-MM-DD") %></span>
-            <% if (post.categories && post.categories.length) { %>
-              <span>&nbsp;·</span>
-              <% post.categories.forEach(function(category, index) { %>
-                <a class="post-categories-item" href='<%= url_for(category.path) %>'><%= category.name %></a>
-              <% }); %>
-            <% } %>
-          </div>
-          <!-- 标签 -->
-          <div>
-            <% post.tags.forEach(function(tag, index) { %>
-              <a class="post-tags-item" href="<%= url_for(tag.path) %>" rel="tag">#&nbsp;<%= tag.name %></a>
-            <% }); %>
-          </div>
-        </div>
-      </div>
-    </article>
-  <% }) %>
-</section>
+<!-- Post List -->
+<% page.posts.each(function (post) { %>
+  <article class="posts">
+    <%- partial('_partial/index/post-card', {post: post}) %>
+    <%- partial('_partial/index/post-info', {post: post}) %>
+  </article>
+<% }) %>
+
 <%- partial('_partial/paginator') %>

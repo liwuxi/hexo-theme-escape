@@ -4,7 +4,11 @@
             <% let social = theme.social[i]; %>
             <a href="<%- url_for(social.url) %>" class="<%= social.icon %>"><%= i %></a>
         <% } %>
+        <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+        </svg>
     </div>
+    
     <p>Copyright © <%= theme.footer.copyright_since %> <%= config.title %></p>
     <div><%- theme.footer.custom_text %></div>
     <p>Power by <a href="https://https://hexo.io/" target="_blank">Hexo</a> Theme by <a href="https://blog.xiwu.li" target="_blank">Escape</a></p>

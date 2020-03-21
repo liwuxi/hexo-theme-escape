@@ -1,0 +1,18 @@
+<section>
+  <% if (post.thumbnail == null || post.thumbnail == '') { %>
+    <a class="post-title noThumbnail" href="<%- url_for(post.path) %>"><%= post.title %></a>
+    <br>
+    <div>
+      <%- page.excerpt %>
+    </div>
+  <% } else { %>
+    <div class="post-thumbnail" style="background-image: url('<%- post.thumbnail %>');">
+      <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+    </div>
+    <div class="post-content">
+      <%- post.more.replace(/<\/?.+?\/?>/g, "").substring(0, 100) %>
+      <!-- <%- post.more %> -->
+      <span class="post-link"><a href="<%- url_for(post.path) %>">>> <%- __('Posts.More') %></a></span>
+    </div>
+  <% } %>
+</section>
