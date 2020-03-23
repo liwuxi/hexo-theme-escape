@@ -1,47 +1,23 @@
-@import "colors";
-@import "_partial/header";
-@import "_partial/index";
-@import "_partial/paginator";
-@import "_partial/footer";
-@import "_partial/post";
+@import 'colors';
+@import 'normalize.css';
+// @import '_partial/header';
+// @import '_partial/index';
+// @import '_partial/paginator';
+// @import '_partial/footer';
+// @import '_partial/post';
 
-* {
-  margin: 0;
-  padding: 0;
-  transition: all 0.3s ease;
-}
+/*
+ * Header Style
+ */
+@import 'header';
 
-body {
-  background-color: #f3f4f9;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  font-family: -apple-system,BlinkMacSystemFont,PingFang SC,Hiragino Sans GB,Microsoft YaHei;
-}
+/*
+ * Index Styls
+ */
+@import 'index';
 
-#main {
-  // width: 750px;
-  // margin: 50px auto;
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-a {
-  text-decoration: none;
-}
-
-hr {
-  border: none;
-  border-top:1px solid #ddd;
-  color: gray;
-  margin: 5px 0;
-}
-
-.icon {
-  width: 1em; height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
-}
+/*
+ * Golbal Style
+ */
+ul
+  padding: 0

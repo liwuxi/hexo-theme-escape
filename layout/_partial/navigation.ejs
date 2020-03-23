@@ -1,7 +1,7 @@
 <nav id="navBar">
-    <ul class="menu">
+    <ul>
         <% for (name in theme.menu) { %>
-        <li class="menu-item">
+        <li>
             <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"><%- name %></a>
         </li>
         <% } %>
