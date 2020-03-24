@@ -1,11 +1,9 @@
 header
     height: 600px
-    // display: flex
-    // justify-content: center
-    // align-items: center
     position: relative
 
     a
+        color: title-font-color
         text-decoration: none
 
     #site-branding
@@ -16,16 +14,29 @@ header
         #site-title
             line-height: 50px
             font-size: 80px
+            text-shadow: 1px 1px 0px #FF0000, -1px -1px 0px #0091FF;
 
         #site-description
+            font-style: italic
             font-size: 20px
 
     #navBar
         position: absolute
         bottom: 0
-        left: 50%
-        transform: translateX(-50%)
         height: 40px
+        width: 100%
+        display: flex
+        justify-content: center          
 
         li
+            width: 130px
+            text-align: center
             display: inline-block
+        
+        a
+            display: block
+            font-size: 20px
+            line-height: 40px
+            border-bottom: 2px solid rgba(0, 45, 139, 0)
+            &:hover
+                border-bottom: 2px solid rgb(0, 45, 139)

@@ -5,6 +5,7 @@ basic:
     ico:
     apple_touch_icon:
     safari_pinned_tab:
+  site_banner: '/images/escape-banner.png'
 
 menu:
   Home: /
@@ -13,9 +14,6 @@ menu:
   Tags: /tags
   Category: /categories
   Friend: /links
-
-testimg: '/images/escape-banner.jpg'
-
 
 social:
   Github:
