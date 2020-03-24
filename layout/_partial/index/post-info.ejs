@@ -1,19 +1,18 @@
 <div class="post-footer">
     <div>
       <img class="avatar" src="<%- theme.basic.avatar %>"></img>
-      <span class="post-label"><%- date(post.date, "YYYY-MM-DD") %></span>
-      <% if (post.categories && post.categories.length) { %>
-        <span>&nbsp;·</span>
-        <% post.categories.forEach(function(category, index) { %>
-          <a class="post-categories-item" href='<%= url_for(category.path) %>'><%= category.name %></a>
-        <% }); %>
-      <% } %>
+      <span class="post-label"><%- date(post.date, "YYYY-MM-DD") %>
+        <% if (post.categories && post.categories.length) { %>
+          ·
+          <% post.categories.forEach(function(category, index) { %>
+            <a class="post-categories-item" href='<%= url_for(category.path) %>'><%= category.name %></a>
+          <% }); %>
+        <% } %>
+      </span>
     </div>
-    <!-- 标签 -->
     <div>
       <% post.tags.forEach(function(tag, index) { %>
         <a class="post-tags-item" href="<%= url_for(tag.path) %>" rel="tag">#&nbsp;<%= tag.name %></a>
       <% }); %>
     </div>
-
   </div>
