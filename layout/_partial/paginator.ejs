@@ -1,8 +1,9 @@
 <% if (page.total > 1){ %>
-  <nav class="page-nav">
+  <!-- <a class="load-more" href="/post/2">加载更多</a> -->
+  
+  <nav class="navigation">
     <%- paginator({
       prev_text: __('Paginator.Prev'),
-      <!-- next_text: __('Paginator.Next') + "&raquo;" -->
       next_text: __('Paginator.Next')
     }) %>
   </nav>
