@@ -1,7 +1,7 @@
-<div id="artical-banner" style="background: url('<%- page.thumbnail %>') center/cover;">
-  <div class="artical-info">
+<div id="article-banner" style="background: url('<%- page.thumbnail %>') center/cover;">
+  <div class="article-info">
       <div>
-        <h1 class="artical-title"><%= page.title %></h1>
+        <h1 class="article-title"><%= page.title %></h1>
         <span>
             <% page.categories.forEach(function(category, index) { %>
                 <a href='<%= url_for(category.path) %>'><%= category.name %></a>
@@ -12,11 +12,11 @@
       </div>
   </div>
 </div>
-<article>
+<article id="article">
   <%- page.content %>
-  <div class="artical-footer">
+  <div class="article-footer">
     <img src="<%- theme.basic.avatar %>" alt="Author avatar">
-    <div class="artical-footer-text">
+    <div class="article-footer-text">
       <p>
         <%- config.author %>
       </p>
