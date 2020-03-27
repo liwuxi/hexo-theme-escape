@@ -18,13 +18,22 @@ menu:
 social:
   Github:
     url: https://github.com/liwuxi
-    icon:
+    icon: icon-github
+  Telegram:
+    url: https://t.me/liwuxi
+    icon: icon-telegram
+  Instagram:
+    url: https://www.instagram.com/andy_lifeshow/
+    icon: icon-instagram
+  Weibo:
+    url: https://www.weibo.com/imlevis
+    icon: icon-weibo
   E-Mail:
     url: mailto:im@xiwu.li
     icon: icon-email
   Rss:
     url: /atom.xml
-    icon: icon-rss
+    icon: icon-RSS
 
 
 
