@@ -5,16 +5,13 @@
   </head>
   <body>
     <% if (is_post()) { %>
-      <%- partial('_partial/post/post-header') %>
+      <%- partial('_partial/header/post-header') %>
     <% } else { %>
-      <%- partial('_partial/header') %>
+      <%- partial('_partial/header/header') %>
     <% } %>
     <main id="main">
       <%- body %>
     </main>
-    <!-- <% if (!is_archive()) { %>
-      <%- partial('_partial/footer') %>
-    <% } %> -->
     <%- partial('_partial/footer') %>
   </body>
 </html>

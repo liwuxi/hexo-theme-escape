@@ -84,30 +84,55 @@
         margin: 20px 20px 0
         border: 0.5px solid post-shadow
 
+.load-more
+    display: block
+    width: 100px
+    height: 45px
+    background-color: card-bg-color
+    border-radius: 20px
+    box-shadow: 0px 10px 20px post-shadow
+    text-decoration: none
+    text-align: center
+    line-height: 45px
+    margin: 20px auto
 
-.navigation
+    &:hover
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+    
+    i
+        color: main-color
+        font-size: 30px
+
+.paginator
     width: 640px
     margin: 0 auto
-    font-size: 20px
+    font-size: 15px
     text-align: center
 
     a
         color: main-color
         text-decoration: none
+        // &:hover:not(:first-of-type):not(:last-of-type)
+        //     background-color: card-bg-shadow-color
     
     .page-number
-        width: 30px
+        width: 25px
         display: inline-block
         margin: 0 10px
         background-color: post-shadow
         text-align: center
-        line-height: 30px
+        line-height: 25px
         border-radius: 5px
         color: font-color
+        &:hover
+            background-color: card-bg-shadow-color
 
     .current
         background-color: main-color
         color: card-bg-color
+        &:hover
+            background-color: main-color
     
     .extend
         margin: 0 10px
