@@ -61,15 +61,25 @@
     justify-content: space-between
 
     .paginator-item
-        font-size: 15px
-        color: paginator-color
         display: flex
         align-items: center
         cursor: pointer
         transition: all 0.3s ease
+        color: paginator-color
+        text-decoration none
+
         &:hover
             color: main-color
             transform: translate(-10px, 0)
+
+
+        a
+            font-size: 15px
+            color: paginator-color
+            text-decoration: none
+            transition: all 0.3s ease
+            &:hover
+                color: main-color
 
         .iconfont
             margin: 0 5px

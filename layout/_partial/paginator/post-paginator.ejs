@@ -1,10 +1,18 @@
 <div id="post-paginator">
-    <div class="paginator-item">
-        <i class="iconfont icon-left"></i>
-        <span>上一页</span>
-    </div>
-    <div class="paginator-item">
-        <span>下一页</span>
-        <i class="iconfont icon-right"></i>
-    </div>
-</div>
+    <% if (page.prev) { %>
+        <div class="paginator-item">
+            <i class="iconfont icon-left"></i>
+            <a href="<%- url_for(page.prev.path) %>"><%= page.prev.title %></a>
+        </div>
+    <% } else { %>
+        <div class="paginator-item"></div>
+    <% } %>
+    <% if (page.next) { %>
+        <div class="paginator-item">
+            <a href="<%- url_for(page.next.path) %>"><%= page.next.title %></a>
+            <i class="iconfont icon-right"></i>
+        </div>
+    <% } else { %>
+        <div class="paginator-item"></div>
+    <% } %>
+</div> 
