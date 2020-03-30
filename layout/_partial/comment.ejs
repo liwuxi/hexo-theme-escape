@@ -1,0 +1,31 @@
+<% if (theme.valine.enable === true) { %>
+    <div id="vcomments" class="comment">
+        <script>
+            new Valine({
+                el: '#vcomments',
+                notify: '<%= theme.valine.notify %>',
+                verify: '<%= theme.valine.verify %>',
+                app_id: '<%= theme.valine.appId %>',
+                app_key: '<%= theme.valine.appKey %>',
+                lang: 'en',
+                placeholder: '<%= theme.valine.placeholder %>',
+                avatar: '<%= theme.valine.avatar %>'
+            });
+        </script>
+    </div>
+<% } else if (theme.disqus.enable === true) { %>
+    <div id="disqus_thread" class="comment">
+        <script>
+            new Valine({
+                el: '#vcomments',
+                notify: '<%= theme.valine.notify %>',
+                verify: '<%= theme.valine.verify %>',
+                app_id: '<%= theme.valine.appId %>',
+                app_key: '<%= theme.valine.appKey %>',
+                lang: 'en',
+                placeholder: '<%= theme.valine.placeholder %>',
+                avatar: '<%= theme.valine.avatar %>'
+            });
+        </script>
+    </div>
+<% } %>

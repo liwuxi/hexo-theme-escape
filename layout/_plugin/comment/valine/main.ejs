@@ -1,0 +1,14 @@
+<div id="vcomments" class="comment">
+    <script>
+        new Valine({
+            el: '#vcomments',
+            notify: '<%= theme.comment.valine.notify %>',
+            verify: '<%= theme.comment.valine.verify %>',
+            app_id: '<%= theme.comment.valine.leancloud_appId %>',
+            app_key: '<%= theme.comment.valine.leancloud_appKey %>',
+            lang: '<%= theme.comment.valine.lang %>',
+            placeholder: '<%= theme.comment.valine.placeholder %>',
+            avatar: '<%= theme.comment.valine.avatar %>'
+        });
+    </script>
+</div>
