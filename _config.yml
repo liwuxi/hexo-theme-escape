@@ -62,4 +62,4 @@ comment:
     placeholder: '说点什么..'
   # disqus
   disqus:
-    shortname: leevis
+    shortname: escape-theme

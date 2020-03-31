@@ -8,7 +8,9 @@
             <% }); %>
         </span>
         <span><%- date(page.date, "YYYY-MM-DD") %></span>
-        <span>22 条评论</span>
+        <% if (theme.comment.use === 'disqus') { %>
+          <a class="disqus-comment-count" data-disqus-url="<%= page.permalink %>"></a><%= __('Post.comments') %>
+        <% } %>
       </div>
   </div>
 </div>

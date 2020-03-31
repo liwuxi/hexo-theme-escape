@@ -4,6 +4,6 @@
  * @date 2020-3-10
  */
 
-$(function() {
-    console.log("test");
-})
+// $(function() {
+//     // console.log(window);
+// })
