@@ -3,13 +3,11 @@
       <div>
         <h1 class="article-title"><%= page.title %></h1>
         <span>
-            <% page.categories.forEach(function(category, index) { %>
-                <a href='<%= url_for(category.path) %>'><%= category.name %></a>
-            <% }); %>
+            <%- partial('_plugin/common/categories', {item: page}) %>
         </span>
         <span><%- date(page.date, "YYYY-MM-DD") %></span>
         <% if (theme.comment.use === 'disqus') { %>
-          <a class="disqus-comment-count" data-disqus-url="<%= page.permalink %>"></a><%= __('Post.comments') %>
+          <a class="disqus-comment-count" data-disqus-url="<%= page.permalink %>"></a> <%= __('Post.comments') %>
         <% } %>
       </div>
   </div>
