@@ -1,8 +1,8 @@
 basic:
   avatar: '/images/default_avatar.png'
   keywords: hexo,theme,escape
-  favicon:
-    ico:
+  favicon: 
+    ico: '/images/favicon.ico'
     apple_touch_icon:
     safari_pinned_tab:
   site_banner: '/images/escape-banner.png'
@@ -33,11 +33,12 @@ social:
     icon: icon-email
   Rss:
     url: /atom.xml
-    icon: icon-RSS
+    icon: icon-rss
 
 
 
 language: en
+automatic_loading: false
 
 footer:
   copyright_since: 2016

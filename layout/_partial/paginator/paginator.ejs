@@ -1,5 +1,7 @@
 <% if (page.total > 1){ %>
-  <a href="/post/2" class="load-more"><i class="iconfont icon-down"></i></a>
+  <% if (theme.automatic_loading === true) { %>
+    <a href="/post/2" class="load-more"><i class="iconfont icon-down"></i></a>
+  <% } %>
   <nav class="paginator">
     <%- paginator({
       prev_text: __('Paginator.Prev'),
