@@ -39,6 +39,7 @@ social:
 
 language: en
 automatic_loading: false
+highlight_style: 'night-owl'
 
 footer:
   copyright_since: 2016
@@ -47,7 +48,6 @@ footer:
 
 
 license: '本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)</a> 协议'
-
 
 
 comment:

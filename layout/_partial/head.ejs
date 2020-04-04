@@ -6,16 +6,24 @@
     <link rel="icon" href="<%- theme.basic.favicon.ico %>">
   <% } %>
   <link rel="apple-touch-icon" href="./favicon180x180.png" sizes="180x180">
-  <%- css('css/main.css') %>
-  <%- css('css/normalize.css') %>
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1698634_nv19bmo2bgg.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script> -->
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  <!-- <link rel="stylesheet"
-      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css"> -->
 
-<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
-<%- css('lib/highlight/styles/night-owl.css') %>
-<script>hljs.initHighlightingOnLoad();</script>
+  <!-- ### Style & Iconfont ### -->
+  <%- css('css/main.css') %>
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1698634_nv19bmo2bgg.css">
+  
+  <!-- ### Comments ### -->
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <!-- ### Code highlight ### -->
+  <% if (config.highlight.enable === false) { %>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <%- css('lib/highlight/styles/night-owl.css') %>
+    <script>hljs.initHighlightingOnLoad();</script>
+  <% } %>
+  <% if (config.highlight.enable) { %>
+    <%- css('lib/highlight/styles/' + theme.highlight_style + '.css') %>
+  <% } %>
+      
+  <!-- ### Script ### -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 </head>
