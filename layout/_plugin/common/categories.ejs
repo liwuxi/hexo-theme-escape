@@ -1,10 +1,7 @@
-<% if (item.categories && item.categories.length){ %>
-    <%
-        var categories = [];
-        item.categories.forEach(function(category){
-            categories.push('<a href="' + config.root + category.path + '">' + category.name + '</a>');
-        });
-    %>
-        <!-- <span class="glyphicon glyphicon-folder-open"></span> -->
-        <%- categories.join(' ') %>
-<% } %>
+<%
+    var categories = [];
+    item.categories.forEach(function(category){
+        categories.push('<a href="' + config.root + category.path + '">' + category.name + '</a>');
+    });
+%>
+<%- categories.join(' ') %>

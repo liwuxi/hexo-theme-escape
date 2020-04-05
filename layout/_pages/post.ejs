@@ -2,10 +2,13 @@
   <div class="article-info">
       <div>
         <h1 class="article-title"><%= page.title %></h1>
-        <span>
-            <%- partial('_plugin/common/categories', {item: page}) %>
-        </span>
-        <span><%- date(page.date, "YYYY-MM-DD") %></span>
+
+        <% if (page.categories && page.categories.length){ %>
+          <span><%- partial('_plugin/common/categories', {item: page}) %></span>
+        <% } %>
+        
+        <span><%- date(page.date, "YYYY-MM-DD") %> </span>
+
         <% if (theme.comment.use === 'disqus') { %>
           <a class="disqus-comment-count" data-disqus-url="<%= page.permalink %>"></a> <%= __('Post.comments') %>
         <% } %>
