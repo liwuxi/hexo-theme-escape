@@ -7,15 +7,18 @@
      */
     a
         color: main-color
+        text-decoration: none
+        &:hover
+            text-decoration: underline
 
     h1
         font-size: 2rem
-        border-bottom: 1px solid hr-color
+        border-bottom: 1px dashed hr-color
         padding-bottom: 0.3em
     
     h2
         font-size: 1.6rem
-        border-bottom: 1px solid hr-color
+        border-bottom: 1px dashed hr-color
         padding-bottom: 0.3em
     
     h3
@@ -48,21 +51,61 @@
 
         .hljs, pre
             background: transparent !important
+            padding: 0
+
+        .code, .gutter
+            padding-left: 0
+
+        table, th, td
+            border: none
    
     img
-        width: 100%
-
-    code
-        font-size: 90%
+        max-width: 100%
 
     ol
-        padding: 20px
+        padding-left: 20px
+        li
+            ul
+                padding-left: 20px
+
+    ul
+        padding-left: 20px
 
     hr
         border: none
-        border-bottom: 1px solid hr-color
+        border-bottom: 1px dashed hr-color
 
     p
         code
+            font-size: 90%
+            padding: 0 0.3em
             background-color: code-color
+            border-radius: 3px
 
+    dl pre
+        background-color: code-bg-color
+        margin: 10px -40px
+        padding: 1em 40px
+
+    table
+        border-collapse: collapse
+        empty-cells: show
+        border: 1px solid #dedede
+
+        th, td
+            border: 1px solid #dedede
+            padding: 5px 10px
+
+        tr:nth-child(2n)
+            background-color: rgb(246, 248, 250)
+        
+        code
+            font-size: 90%
+            padding: 0 0.3em
+            background-color: code-color
+            border-radius: 3px
+
+    blockquote
+        margin: 0
+        padding: 0 1em
+        border-left: 0.2em solid main-color
