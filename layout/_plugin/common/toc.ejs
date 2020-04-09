@@ -1,0 +1,10 @@
+<% if (theme.toc.enable && (page.toc !== false) ) { %>
+    <% const toc_obj = toc(page.content, {
+        class: 'article-toc',
+        list_number: theme.toc.line_number || false,
+        max_depth: theme.toc.max_depth
+    }); %>
+    <% if (toc_obj.length > 0) { %>
+        <div id="article-toc"><%- toc_obj %></div>
+    <% } %>
+<% } %>
