@@ -1,9 +1,10 @@
 #article
     color: article-color
     line-height: 1.7em
+    position: relative
 
     /*
-     * Font Style
+     * Article font Style
      */
     a
         color: main-color
@@ -58,7 +59,10 @@
 
         table, th, td
             border: none
-   
+    
+    /*
+     *  Article content Style
+     */
     img
         max-width: 100%
 
@@ -109,3 +113,23 @@
         margin: 0
         padding: 0 1em
         border-left: 0.2em solid main-color
+
+    kbd
+        padding: 0 0.3em
+        border-radius: 3px
+        font-size: 80%
+        border: 1px solid rgb(204, 204, 204)
+        box-shadow: 0px 1px 0px rgba(0,0,0,0.2), inset 0px 0px 0px 2px #ffffff
+
+    .video-container
+        position: relative
+        padding-top: (9 / 16 * 100)% // 16:9 ratio
+        height: 0
+        overflow: hidden
+        iframe, object, embed
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            margin-top: 0

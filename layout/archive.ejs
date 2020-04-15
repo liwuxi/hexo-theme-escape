@@ -1,15 +1,45 @@
-<%
-const archivesList = list_archives({ show_count: false });
-%>
+<div id="mian-container">
 
-<h1><%=page.month + '/' + page.year%></h1>
-  <% page.posts.each(article => { %>
-    <div class="archive-item">
-      <a href="<%=url_for(article.path)%>">
-        <%=article.title%>
-      </a>
-      <time datetime="<%=date_xml(article.date)%>">
-        <%=date(article.date)%>
-      </time>
+  <div class="timeline-item count">
+    <div class="item-left">
+      <span class="item-icon"></span>
     </div>
-  <% }) %>
+    <div class="item-right"><%= __('Archives.total',site.posts.length) %></div>
+  </div>
+
+  <% function renderArchive(posts, year, month = null) {
+    const time = moment([page.year, (page.month) ? page.month - 1 : null].filter(i => i !== null)); 
+  %>
+    <div class="timeline-item">
+      <div class="item-left">
+        <span class="item-icon l"></span>
+      </div>
+      <div class="item-right">
+        <p class="year"><%= (month === null) ? year : (time.locale((config.language) ? config.language : 'en').format('MMMM YYYY')) %></p>
+      </div>
+    </div>
+    <% posts.each(post => { %>
+    <div class="timeline-item ar-article">
+      <div class="item-left">
+        <span class="item-icon s"></span>
+      </div>
+      <div class="item-right"> 
+        <span class="article-date"><%= date(post.date, 'MM-DD') %></span>
+        <a href="<%- url_for(post.path) %>" rel="bookmark"><span class="article-title"><%- post.title %></span></a>
+      </div>
+    </div>
+    <% }) %>
+  <% } %>
+
+  <% if (!page.year) {
+    let years = {};
+    page.posts.each(post => years[post.date.year()] = null);
+    for (let year of Object.keys(years).sort((a, b) => b - a)) {
+      let posts = page.posts.filter(p => p.date.year() == year); %>
+      <%- renderArchive(posts, year, null) %>
+    <% }
+  } else { %>
+    <%- renderArchive(page.posts, page.year, page.month) %>
+  <% } %>
+</div>
+<%- partial('_plugin/common/pagination/paginator') %>

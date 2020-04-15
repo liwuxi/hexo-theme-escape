@@ -11,3 +11,6 @@ Paginator:
 
 Post:
   comments: 条评论
+
+Archives:
+  total: "本站一共有 %d 篇文章"

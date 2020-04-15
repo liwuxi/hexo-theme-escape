@@ -1,10 +1,5 @@
-<%
-const tagsList = list_tags({ show_count: false });
-%>
-
-<div>
-<!-- <% site.tags.each(function(category) { %>
-	<a href="<%- url_for(category.path) %>"><%= category.name %></a>
-<% }); %> -->
-<%-tagsList%>
+<div id="mian-container">
+	<div class="tag-cloud">
+		<%- tagcloud() %>
+	</div>
 </div>

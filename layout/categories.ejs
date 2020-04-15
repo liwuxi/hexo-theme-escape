@@ -1,7 +1,14 @@
-<%
-const categoriesList = list_categories({ show_count: false });
+<% 
+const categoriesList = list_categories({ 
+  show_count: true,
+  depth: 1,
+  style: 'unordered list',
+  separator: ' '
+});
 %>
 
-<div>
-  <%-categoriesList%>
+<div id="mian-container">
+  <div class="category-list">
+    <%- categoriesList %>
+  </div>
 </div>
