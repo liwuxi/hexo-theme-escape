@@ -16,6 +16,7 @@
   </div>
 </div>
 <article id="article">
+  <%- partial('_plugin/common/toc') %>
   <%- page.content %>
   <div class="article-footer">
     <img src="<%- theme.basic.avatar %>" alt="Author avatar">
@@ -27,6 +28,5 @@
     </div>
   </div>
 </article>
-<%- partial('_plugin/common/toc') %>
 <%- partial('_plugin/common/pagination/paginator') %>
 <%- partial('_plugin/comment/' + theme.comment.use + '/main') %>

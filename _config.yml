@@ -53,6 +53,7 @@ toc:
   enable: true
   line_number: true
   max_depth: 3
+  min_depth: 2
 
 
 comment:
