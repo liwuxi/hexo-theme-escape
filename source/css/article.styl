@@ -3,7 +3,6 @@
     line-height: 1.7em
     position: relative
 
-
     /*
      *  Article font Style
      */
@@ -144,22 +143,45 @@
         position: absolute
         left: 102%
         top: 150px
-        width: 100%
+        white-space: nowrap
         font-size: 0.8em
-        overflow-y: auto
 
-    a
-        color: article-color
-        text-decoration: none
+        li
+            list-style: none
 
-    ol
-        margin: 15px
-        padding: 0
-        list-style: none
+        .fixed
+            position: fixed
+            top: 0
 
-    .fixed
-        position: fixed
-        top: 0px
+        for i in (1..6)
+            .toc-level-{i} .toc-text 
+                margin-left: i em
 
-    li
-        list-style: none
+        .toc-link
+            color: font-color
+            display: inline-block
+            border-left: 2px solid transparent
+            &:hover
+                text-decoration: none
+
+        .toc-child
+            margin-left: 0
+            padding-left: 0
+
+        .toc-item
+            &:hover > .toc-link
+                text-decoration: underline
+                .toc-text
+                    color: main-color
+
+            &.active > .toc-link
+                    color: main-color
+                    border-left: 2px solid main-color
+                    font-weight: bold
+
+        if(hexo-config('toc.hide_child'))
+            .toc-child
+                display: none
+        
+            .toc-item.active .toc-child
+                display: block

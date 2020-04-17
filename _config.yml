@@ -51,7 +51,8 @@ license: '本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.
 
 toc:
   enable: true
-  line_number: true
+  hide_child: true
+  line_number: false
   max_depth: 3
   min_depth: 2
 
