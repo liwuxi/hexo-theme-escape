@@ -1,6 +1,6 @@
 <section>
   <% if (post.thumbnail == null || post.thumbnail == '') { %>
-    <a class="post-title noThumbnail" href="<%- url_for(post.path) %>"><%= post.title %></a>
+    <a class="post-title no-thumbnail" href="<%- url_for(post.path) %>"><%= post.title %></a>
     <hr>
     <div class="post-content">
       <%- post.excerpt %>
