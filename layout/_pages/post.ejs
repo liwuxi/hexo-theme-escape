@@ -1,4 +1,8 @@
-<div id="article-banner" style="background: url('<%- page.thumbnail %>') center/cover;">
+<% if (page.thumbnail) { %>
+  <div id="article-banner" style="background: url('<%- page.thumbnail %>') center/cover;">
+<% } else { %>
+  <div id="article-banner" class="no-banner">
+<% } %>
   <div class="article-info">
       <div>
         <h1 class="article-title"><%= page.title %></h1>
@@ -28,5 +32,5 @@
     </div>
   </div>
 </article>
-<%- partial('_plugin/common/pagination/paginator') %>
+<%- partial('_plugin/common/pagination/post-paginator') %>
 <%- partial('_plugin/comment/' + theme.comment.use + '/main') %>

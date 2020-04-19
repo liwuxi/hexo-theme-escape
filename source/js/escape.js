@@ -23,14 +23,16 @@ $(document).ready(function () {
     /**
      * Toc Position
      */
-    let tocCoord = $("#article-toc").offset().top;
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > tocCoord) {
-            $(".toc").addClass("fixed");
-        } else {
-            $(".toc").removeClass("fixed");
-        }
-    });
+    if($("#article-toc")[0]){
+        let tocCoord = $("#article-toc").offset().top;
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > tocCoord) {
+                $(".toc").addClass("fixed");
+            } else {
+                $(".toc").removeClass("fixed");
+            }
+        });
+    }
 
     /**
      * Toc Dynamic style
@@ -53,7 +55,19 @@ $(document).ready(function () {
         else if(tocHeight <= thisTop)
             toc.scrollTop(tocTop + thisTop + link.outerHeight() - tocHeight);
     });
+
+    /**
+     * No banner Style render
+     */
+    if($(".no-banner")[0]){
+        $(".no-banner").css("background", "linear-gradient(to bottom right, " + randomColor() + "," + randomColor() + ")")
+    }
 })
+
+function randomColor() {
+    var rgb = Math.random(16);
+    return "#"+String(rgb).substring(2,8);
+}
 
 /**
  * @name scrollSpy
