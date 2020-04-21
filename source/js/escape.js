@@ -62,7 +62,20 @@ $(document).ready(function () {
     if($(".no-banner")[0]){
         $(".no-banner").css("background", "linear-gradient(to bottom right, " + randomColor() + "," + randomColor() + ")")
     }
+
+    /**
+     * Search
+     */
+    $("#search").click(function() {
+        var searchInput = $("#search-input");
+        searchInput.show().focus();
+        searchInput.css({
+            "width": "150px",
+            "padding": "0 10px",
+        });
+    });
 })
+
 
 function randomColor() {
     var rgb = Math.random(16);
@@ -110,5 +123,14 @@ function scrollSpy(menuSelector, options) {
             active = $(newActive).addClass(activeClassName).trigger("scrollspy");
             lastId = id;
         }
+    });
+}
+
+// Search Input
+function hideInput() {
+    $("#search-input").css({
+        "width": "0px",
+        "border": "none",
+        "padding": "0"
     });
 }
