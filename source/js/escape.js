@@ -5,17 +5,31 @@
  */
 
 $(document).ready(function () {
-    // Go up button
-    $("#go-up").hide();
+    var goUpBtn = $("#go-up");
+    goUpBtn.hide();
     let height = $(window).height();
+
+    /**
+     * Scroll function
+     */
     $(window).scroll(function() {
-        if ($(window).scrollTop() > height) {
-            $("#go-up").fadeIn();
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        var bannerTransform;
+
+        // Parallax effect
+        bannerTransform = "translate3d(0px, " + scrollTop / 5 + "px, 0px)";
+        $("#article-banner").css("transform", bannerTransform);
+
+        // Go up button
+        if (scrollTop > height) {
+            goUpBtn.fadeIn();
         } else { 
-            $("#go-up").fadeOut();
+            goUpBtn.fadeOut();
         }
     });
-    $("#go-up").click(function() {
+
+    // Go up button
+    goUpBtn.click(function() {
         $("html, body").scrollTop(0);
         return false;
     });
@@ -24,7 +38,7 @@ $(document).ready(function () {
      * Toc Position
      */
     if($("#article-toc")[0]){
-        let tocCoord = $("#article-toc").offset().top;
+        var tocCoord = $("#article-toc").offset().top;
         $(window).scroll(function() {
             if ($(window).scrollTop() > tocCoord) {
                 $(".toc").addClass("fixed");
@@ -76,7 +90,6 @@ $(document).ready(function () {
     });
 })
 
-
 function randomColor() {
     var rgb = Math.random(16);
     return "#"+String(rgb).substring(2,8);
@@ -89,6 +102,7 @@ function randomColor() {
  * @param {String} menuSelector 
  * @param {*} options 
  */
+
 function scrollSpy(menuSelector, options) {
     var menu = $(menuSelector);
     options = options || {};
@@ -128,9 +142,11 @@ function scrollSpy(menuSelector, options) {
 
 // Search Input
 function hideInput() {
-    $("#search-input").css({
-        "width": "0px",
-        "border": "none",
-        "padding": "0"
-    });
+    if ( !$("#search").is(":active") ) {
+        $("#search-input").css({
+            "width": "0px",
+            "border": "none",
+            "padding": "0"
+        });
+    }
 }
