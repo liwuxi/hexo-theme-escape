@@ -1,0 +1,14 @@
+<% if (theme.search.enable) { %>
+    <div class="search-container">
+        <% if (theme.search.use === 'google') { %>
+            <%- search_form({
+                text: __('Search.placeholder'),
+                button: false
+            }) %>
+            <i id="search" class="iconfont icon-search"></i>
+        <% } else if (theme.search.use === 'local') { %>
+            <input type="search" class="search-form-input" placeholder="<%= __('Search.placeholder') %>">
+            <i id="search" class="iconfont icon-search"></i>
+        <% } %>
+    </div>
+<% } %>

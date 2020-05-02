@@ -89,17 +89,27 @@ $(document).ready(function () {
         $(".no-banner").css("background", "linear-gradient(to bottom right, " + randomColor() + "," + randomColor() + ")")
     }
 
-    /**
+        /**
      * Search
      */
     $("#search").click(function() {
-        var searchInput = $("#search-input");
+        var searchInput = $(".search-form-input");
         searchInput.show().focus();
         searchInput.css({
             "width": "150px",
             "padding": "0 10px",
         });
     });
+
+    $(".search-form-input").blur(function() {
+        if ( !$("#search").is(":active") ) {
+            $(".search-form-input").css({
+                "width": "0px",
+                "border": "none",
+                "padding": "0"
+            });
+        }
+    })
 })
 
 function randomColor() {
@@ -150,15 +160,4 @@ function scrollSpy(menuSelector, options) {
             lastId = id;
         }
     });
-}
-
-// Search Input
-function hideInput() {
-    if ( !$("#search").is(":active") ) {
-        $("#search-input").css({
-            "width": "0px",
-            "border": "none",
-            "padding": "0"
-        });
-    }
 }

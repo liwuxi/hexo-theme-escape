@@ -1,13 +1,10 @@
 <nav id="navBar">
     <ul>
         <% for (name in theme.menu) { %>
-        <li>
-            <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"><%- name %></a>
-        </li>
+            <li>
+                <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"><%- name %></a>
+            </li>
         <% } %>
     </ul>
-    <div class="search-container">
-        <input type="search" id="search-input" onblur="hideInput()">
-        <i id="search" class="iconfont icon-search"></i>
-    </div>
+    <%- partial('_plugin/common/search') %>
 </nav>

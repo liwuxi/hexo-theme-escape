@@ -8,7 +8,13 @@ basic:
   site_banner: '/images/escape-banner.png'
 
 custom:
+  # auto / dark / light
+  mode: auto
   main-color: '#002D8B'
+
+search:
+  enable: true
+  use: google
 
 menu:
   Home: /
@@ -37,7 +43,6 @@ social:
   Rss:
     url: /atom.xml
     icon: icon-rss
-
 
 
 language: en
