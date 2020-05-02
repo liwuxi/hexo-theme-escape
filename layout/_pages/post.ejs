@@ -3,34 +3,12 @@
 <% } else { %>
   <div id="article-banner" class="no-banner">
 <% } %>
-  <div class="article-info">
-      <div>
-        <h1 class="article-title"><%= page.title %></h1>
-
-        <% if (page.categories && page.categories.length){ %>
-          <span><%- partial('_plugin/common/categories', {item: page}) %></span>
-        <% } %>
-        
-        <span><%- date(page.date, "YYYY-MM-DD") %> </span>
-
-        <% if (theme.comment.use === 'disqus') { %>
-          <a class="disqus-comment-count" data-disqus-url="<%= page.permalink %>"></a> <%= __('Post.comments') %>
-        <% } %>
-      </div>
-  </div>
+  <%- partial('_partial/post/article-info') %>
 </div>
 <article id="article">
   <%- partial('_plugin/common/toc') %>
   <%- page.content %>
-  <div class="article-footer">
-    <img src="<%- theme.basic.avatar %>" alt="Author avatar">
-    <div class="article-footer-text">
-      <p>
-        <%- config.author %>
-      </p>
-      <p><%- theme.license %></p>
-    </div>
-  </div>
+  <%- partial('_partial/post/article-footer') %>
 </article>
 <%- partial('_plugin/common/pagination/post-paginator') %>
 <%- partial('_plugin/comment/' + theme.comment.use + '/main') %>
