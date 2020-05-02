@@ -23,15 +23,18 @@ $(document).ready(function () {
         // Go up button
         if (scrollTop > height) {
             goUpBtn.fadeIn();
-        } else { 
+        } else {
             goUpBtn.fadeOut();
         }
     });
 
     // Go up button
     goUpBtn.click(function() {
-        $("html, body").scrollTop(0);
-        return false;
+        if(typeof window.getComputedStyle(document.body).scrollBehavior === 'undefined') {
+            $('html,body').animate({ scrollTop: 0 }, 500);
+        } else {
+            $("html, body").scrollTop(0);
+        }
     });
 
     /**
@@ -40,13 +43,22 @@ $(document).ready(function () {
     if($("#article-toc")[0]){
         var tocCoord = $("#article-toc").offset().top;
         $(window).scroll(function() {
-            if ($(window).scrollTop() > tocCoord) {
+            if ($(window).scrollTop() + 50 > tocCoord) {
                 $(".toc").addClass("fixed");
             } else {
                 $(".toc").removeClass("fixed");
             }
         });
     }
+
+    // Smooth movement in safari browser
+    $('.toc-link').click(function () {
+        if(typeof window.getComputedStyle(document.body).scrollBehavior === 'undefined') {
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            });
+        }
+    });
 
     /**
      * Toc Dynamic style
