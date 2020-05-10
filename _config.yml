@@ -6,6 +6,8 @@ basic:
     apple_touch_icon:
     safari_pinned_tab:
   site_banner: '/images/escape-banner.png'
+  about_banner: '/images/about-banner.jpg'
+  links_banner: ''
 
 custom:
   # auto / dark / light

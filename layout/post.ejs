@@ -1,12 +1,9 @@
-<% if (page.layout === 'tags') { %>
-  <!--  Tags Cloud  -->
-  <%- partial('tags') %>
-<% } else if (page.layout === 'links') { %>
+<% if (page.layout === 'links') { %>
   <!--  Links Page  -->
   <%- partial('_pages/links') %>
-<% } else if (page.layout === 'search') { %>
-  <!--  Local Search Page  -->
-  <%- partial('_pages/search') %>
+<% } else if (page.layout === 'about') { %>
+  <!--  About Page  -->
+  <%- partial('_pages/about') %>
 <% } else { %>
   <!--  Post  -->
   <%- partial('_pages/post') %>

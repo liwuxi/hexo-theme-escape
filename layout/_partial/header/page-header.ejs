@@ -1,0 +1,12 @@
+<% if (page.layout === 'about') { %>
+    <header style="background: url('<%- theme.basic.about_banner %>') center/cover;">
+<% } else if (page.layout === 'links') { %>
+    <header style="background: url('<%- theme.basic.site_banner %>') center/cover;">
+<% } %>
+    <div id="site-branding">
+        <a href="<%- url_for() %>">
+            <h1 id="site-title"><%= config.title %></h1>
+            <p id="site-description"> <%= config.description %> </p>
+        </a>
+    </div>
+</header>

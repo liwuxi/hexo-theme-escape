@@ -6,6 +6,8 @@
   <body>
     <% if (is_post()) { %>
       <%- partial('_partial/header/post-header') %>
+    <% } else if (page.layout === 'about' || page.layout === 'links') { %>
+      <%- partial('_partial/header/page-header') %>
     <% } else { %>
       <%- partial('_partial/header/header') %>
     <% } %>
