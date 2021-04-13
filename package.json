@@ -13,18 +13,14 @@
   "keywords": [
     "hexo",
     "hexo-theme",
-    "escape",
-    "simple"
+    "hexo-theme-escape",
+    "simple",
+    "powerful"
   ],
   "author": "Andy Lee",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/liwuxi/hexo-theme-escape/issues"
   },
-  "homepage": "https://github.com/liwuxi/hexo-theme-escape#readme",
-  "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.10",
-    "tailwindcss": "^2.1.1"
-  }
+  "homepage": "https://github.com/liwuxi/hexo-theme-escape#readme"
 }
