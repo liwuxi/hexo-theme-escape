@@ -1,124 +1,124 @@
 #mian-container
-    width: 640px
-    min-height: 300px
-    margin: 0 auto
+  width: 640px
+  min-height: 300px
+  margin: 0 auto
 
-    background-color: card-bg-color
-    box-shadow: 0 20px 40px card-bg-shadow-color
-    border-radius: 30px
-    padding: 50px 40px
+  background-color: card-bg-color
+  box-shadow: 0 20px 40px card-bg-shadow-color
+  border-radius: 30px
+  padding: 50px 40px
+  position: relative
+  top: -150px
+  margin-bottom: -100px
+
+  /**
+   * Tag Cloud Style
+   */
+  .tag-cloud
+    a
+      color: article-color
+      margin: 10px 10px
+      text-decoration: none
+      transition: all 0.2s ease
+      display: inline-block
+      &:hover
+        color: main-color
+        transform: translateY(-2px)
+
+  /**
+   * Timeline Style
+   */
+  .category-list
+    a
+      color: article-color
+      margin: 5px 10px
+      text-decoration: none
+      transition: all 0.2s ease
+      display: inline-block
+      &:hover
+        color: main-color
+        transform: translateY(-2px)
+
+      .category-count
+        color: font-color
+
+      .category-count:before
+        content: ' [ '
+
+      .category-count:after
+        content: ' ] '
+
+  /**
+   * Timeline Style
+   */
+  .timeline-item
+    display: flex
+    align-items: center
     position: relative
-    top: -150px
-    margin-bottom: -100px
+    
+    .item-left
+      width: 24px
+      height: 24px
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-right: 10px
+      z-index: 1
+      background-color: white
+      padding: 1px 0
 
-    /**
-     * Tag Cloud Style
-     */
-    .tag-cloud
+      .item-icon
+        width: 24px
+        height: 24px
+        box-sizing: border-box
+        border: 8px solid main-color
+        border-radius: 50%
+
+      .l
+        width: 22px
+        height: 22px
+        border: 3px solid main-color
+
+      .s
+        width: 12px
+        height: 12px
+        background-color: main-color
+        border: none
+
+    .item-right
+      font-size: 1.3em
+      color: article-color
+      &:hover
+        transition: all 0.2s ease
+        transform: translateX(3px)
+
         a
-            color: article-color
-            margin: 10px 10px
-            text-decoration: none
-            transition: all 0.2s ease
-            display: inline-block
-            &:hover
-                color: main-color
-                transform: translateY(-2px)
+          color: main-color
 
-    /**
-     * Timeline Style
-     */
-    .category-list
-        a
-            color: article-color
-            margin: 5px 10px
-            text-decoration: none
-            transition: all 0.2s ease
-            display: inline-block
-            &:hover
-                color: main-color
-                transform: translateY(-2px)
+      a
+        color: article-color
+        text-decoration: none
 
-            .category-count
-                color: font-color
+      .year
+        font-size: 1.2em
 
-            .category-count:before
-                content: ' [ '
+      .article-date, .article-title
+        font-size: 0.8em
 
-            .category-count:after
-                content: ' ] '
+      .article-date
+        color: font-color
 
-    /**
-     * Timeline Style
-     */
-    .timeline-item
-        display: flex
-        align-items: center
-        position: relative
-        
-        .item-left
-            width: 24px
-            height: 24px
-            display: flex
-            align-items: center
-            justify-content: center
-            margin-right: 10px
-            z-index: 1
-            background-color: white
-            padding: 1px 0
+  .timeline-item:before
+    content: ""
+    background: card-bg-shadow-color
+    position: absolute
+    top: 0
+    left: 11px
+    width: 2px
+    height: 100%
+    
+  .count
+    padding-bottom: 30px
 
-            .item-icon
-                width: 24px
-                height: 24px
-                box-sizing: border-box
-                border: 8px solid main-color
-                border-radius: 50%
-
-            .l
-                width: 22px
-                height: 22px
-                border: 3px solid main-color
-
-            .s
-                width: 12px
-                height: 12px
-                background-color: main-color
-                border: none
-
-        .item-right
-            font-size: 1.3em
-            color: article-color
-            &:hover
-                transition: all 0.2s ease
-                transform: translateX(3px)
-
-                a
-                    color: main-color
-
-            a
-                color: article-color
-                text-decoration: none
-
-            .year
-                font-size: 1.2em
-
-            .article-date, .article-title
-                font-size: 0.8em
-
-            .article-date
-                color: font-color
-
-    .timeline-item:before
-        content: ""
-        background: card-bg-shadow-color
-        position: absolute
-        top: 0
-        left: 11px
-        width: 2px
-        height: 100%
-        
-    .count
-        padding-bottom: 30px
-
-    .ar-article
-        padding: 10px 0
+  .ar-article
+    padding: 10px 0

@@ -1,51 +1,51 @@
 footer
-    text-align: center
-    
-    margin-top: 60px
+  text-align: center
+  
+  margin-top: 60px
 
-    font-size: 15px
+  font-size: 15px
+  color: info-font-color
+
+  a
     color: info-font-color
+    text-decoration: none
+    &:hover
+      text-decoration: underline
 
-    a
-        color: info-font-color
-        text-decoration: none
-        &:hover
-            text-decoration: underline
+  .soical-icon
+    margin: 20px 0
 
-    .soical-icon
-        margin: 20px 0
+  p
+    margin: 5px
 
-    p
-        margin: 5px
+  .iconfont
+    font-size: 30px
+    margin:0 10px
+    &:hover
+      color: main-color
+      text-decoration: none
 
-    .iconfont
-        font-size: 30px
-        margin:0 10px
-        &:hover
-            color: main-color
-            text-decoration: none
+  #go-up
+    position: fixed
+    right: 60px
+    bottom: 60px
+    width: 55px
+    height: 55px
+    background-color: goup-color
+    border-radius: 50%
+    text-align: center
+    text-decoration: none
+    cursor: pointer
+    border: 5px solid transparent
 
-    #go-up
-        position: fixed
-        right: 60px
-        bottom: 60px
-        width: 55px
-        height: 55px
-        background-color: goup-color
-        border-radius: 50%
-        text-align: center
-        text-decoration: none
-        cursor: pointer
-        border: 5px solid transparent
+    &:hover
+      background-color: font-light-color
+      border: 5px solid goup-color
+      transition: all 0.2s ease
+      .icon-top
+        color: goup-color
 
-        &:hover
-            background-color: font-light-color
-            border: 5px solid goup-color
-            transition: all 0.2s ease
-            .icon-top
-                color: goup-color
-
-        .icon-top
-            color: font-light-color
-            font-size: 30px
-            line-height: 55px
+    .icon-top
+      color: font-light-color
+      font-size: 30px
+      line-height: 55px

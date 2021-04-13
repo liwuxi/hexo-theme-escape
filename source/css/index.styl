@@ -1,133 +1,133 @@
 .posts
-    width: 640px
-    background: card-bg-color
-    border-radius: 15px
-    box-shadow: 0px 20px 40px post-shadow
-    box-sizing: border-box
-    margin: 70px auto
-    transition: 0.15s ease-in-out
+  width: 640px
+  background: card-bg-color
+  border-radius: 15px
+  box-shadow: 0px 20px 40px post-shadow
+  box-sizing: border-box
+  margin: 70px auto
+  transition: 0.15s ease-in-out
 
-    &:hover
-        box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1)
-        transform: translateY(-2px)
+  &:hover
+    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1)
+    transform: translateY(-2px)
 
-    .post-thumbnail
-        height: 200px
-        border-radius: 15px 15px 0px 0px
-        position: relative
-        background-size: cover
-        background-position: center
-        overflow: hidden
+  .post-thumbnail
+    height: 200px
+    border-radius: 15px 15px 0px 0px
+    position: relative
+    background-size: cover
+    background-position: center
+    overflow: hidden
 
-        .post-title
-            position: absolute
-            bottom: 20px
-            left: 20px 
-            text-shadow: 1px 1px black
-    
     .post-title
-        font-size: 20px
-        color: title-font-color
+      position: absolute
+      bottom: 20px
+      left: 20px 
+      text-shadow: 1px 1px black
+  
+  .post-title
+    font-size: 20px
+    color: title-font-color
 
-    .no-thumbnail
-        color: title-nt-font-color
-        display: block
-        padding: 20px 20px 0
+  .no-thumbnail
+    color: title-nt-font-color
+    display: block
+    padding: 20px 20px 0
 
-    .post-content
-        padding: 15px 20px
-        color: excerpt-font-color
-        font-size: 15px
-        line-height: 21px
+  .post-content
+    padding: 15px 20px
+    color: excerpt-font-color
+    font-size: 15px
+    line-height: 21px
 
-        p
-            margin: 0
+    p
+      margin: 0
 
-    .post-footer
-        padding: 0 20px 15px
-        color: info-font-color
-        font-size: 14px
-        height: 24px
+  .post-footer
+    padding: 0 20px 15px
+    color: info-font-color
+    font-size: 14px
+    height: 24px
 
-        display: flex
-        justify-content: space-between
-        align-items: center
+    display: flex
+    justify-content: space-between
+    align-items: center
 
-        .avatar
-            width: 24px
-            height: 24px
-            border-radius: 50%
-            
-        .post-label, .avatar
-            vertical-align: middle
-
-        a
-            color: info-font-color
-
-        .post-tags-item
-            background: #F5F5F5
-            border-radius: 10px
-            padding: 0 8px
-            transition: 0.15s ease
-
-            &:hover
-                background: main-color
-                color: #FFF
+    .avatar
+      width: 24px
+      height: 24px
+      border-radius: 50%
+      
+    .post-label, .avatar
+      vertical-align: middle
 
     a
-        text-decoration: none
+      color: info-font-color
 
-    hr
-        margin: 20px 20px 0
-        border: 0.5px solid post-shadow
+    .post-tags-item
+      background: #F5F5F5
+      border-radius: 10px
+      padding: 0 8px
+      transition: 0.15s ease
+
+      &:hover
+        background: main-color
+        color: #FFF
+
+  a
+    text-decoration: none
+
+  hr
+    margin: 20px 20px 0
+    border: 0.5px solid post-shadow
 
 .load-more
-    display: block
-    width: 100px
-    height: 45px
-    background-color: card-bg-color
-    border-radius: 20px
-    box-shadow: 0px 10px 20px post-shadow
-    text-decoration: none
-    text-align: center
-    line-height: 45px
-    margin: 20px auto
+  display: block
+  width: 100px
+  height: 45px
+  background-color: card-bg-color
+  border-radius: 20px
+  box-shadow: 0px 10px 20px post-shadow
+  text-decoration: none
+  text-align: center
+  line-height: 45px
+  margin: 20px auto
 
-    &:hover
-        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-        transform: translateY(-2px);
-    
-    i
-        color: main-color
-        font-size: 30px
+  &:hover
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  
+  i
+    color: main-color
+    font-size: 30px
 
 .paginator
-    width: 640px
-    margin: 0 auto
-    font-size: 15px
+  width: 640px
+  margin: 0 auto
+  font-size: 15px
+  text-align: center
+
+  a
+    color: main-color
+    text-decoration: none
+  
+  .page-number
+    width: 25px
+    display: inline-block
+    margin: 0 10px
+    background-color: post-shadow
     text-align: center
+    line-height: 25px
+    border-radius: 5px
+    color: font-color
+    &:hover
+      background-color: card-bg-shadow-color
 
-    a
-        color: main-color
-        text-decoration: none
-    
-    .page-number
-        width: 25px
-        display: inline-block
-        margin: 0 10px
-        background-color: post-shadow
-        text-align: center
-        line-height: 25px
-        border-radius: 5px
-        color: font-color
-        &:hover
-            background-color: card-bg-shadow-color
+  .current
+    background-color: main-color
+    color: card-bg-color
+    &:hover
+      background-color: main-color
 
-    .current
-        background-color: main-color
-        color: card-bg-color
-        &:hover
-            background-color: main-color
-    
-    .extend
-        margin: 0 10px
+  .extend
+    margin: 0 10px
