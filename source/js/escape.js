@@ -8,6 +8,7 @@ $(document).ready(function () {
   var goUpBtn = $("#go-up");
   goUpBtn.hide();
   let height = $(window).height();
+  setMode();
 
   /**
    * Scroll function
@@ -89,7 +90,7 @@ $(document).ready(function () {
     $(".no-banner").css("background", "linear-gradient(to bottom right, " + randomColor() + "," + randomColor() + ")")
   }
 
-    /**
+  /**
    * Search
    */
   $("#search").click(function() {
@@ -110,11 +111,56 @@ $(document).ready(function () {
       });
     }
   })
+
+  /**
+   * Switch Mode
+   */
+  $("#switch-mode-btn").click(function() {
+    let value = $('#switch-mode-btn').attr('class').split(' ').filter(item => item !== 'iconfont').toString()
+    $('#switch-mode-btn').attr('class', value === 'icon-moon' ? 'iconfont icon-sun' : 'iconfont icon-moon')
+    localStorage.setItem('custom-mode', value === 'icon-moon' ? 'light' : 'dark')
+  })
 })
 
 function randomColor() {
   var rgb = Math.random(16);
   return "#"+String(rgb).substring(2,8);
+}
+
+function setMode() {
+  // if (localStorage.getItem('custom-mode')) {
+  //   $('html').attr('mode', localStorage.getItem('custom-mode'))
+  //   return
+  // }
+  // const doc = document.documentElement
+  // const themeMode = doc.getAttribute('mode')
+  // let className = ''
+  // if (themeMode === 'auto') {
+  //   // 判断当前环境是否支持 CSS 变量
+  //   if (window.matchMedia('(prefers-color-scheme)').matches) {
+  //     // 根据参数自动调整 Icon
+  //     if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+  //       className = 'iconfont icon-moon'
+  //     } else {
+  //       className = 'iconfont icon-sun'
+  //     }
+  //   } else {
+  //     // 使用时间动态调整
+  //     const now = new Date().getHours();
+  //     if (now < 6 || now > 19) {
+  //       className = 'iconfont icon-sun'
+  //     } else {
+  //       className = 'iconfont icon-moon'
+  //     }
+  //   }
+  // } else if (themeMode === 'light') {
+  //   console.log('light')
+  //   className = 'iconfont icon-moon'
+  // } else {
+  //   console.log('dark')
+  //   className = 'iconfont icon-sun'
+  // }
+  // $("#switch-mode-btn").attr('class', className)
 }
 
 /**
@@ -124,7 +170,6 @@ function randomColor() {
  * @param {String} menuSelector 
  * @param {*} options 
  */
-
 function scrollSpy(menuSelector, options) {
   var menu = $(menuSelector);
   options = options || {};

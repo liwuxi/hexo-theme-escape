@@ -5,18 +5,22 @@ basic:
     ico: '/images/favicon.ico'
     apple_touch_icon:
     safari_pinned_tab:
+  logo: '/images/logo.png'
   site_banner: '/images/escape-banner.png'
   about_banner: '/images/about-banner.jpg'
   links_banner: ''
 
 custom:
-  # auto / dark / light
-  mode: auto
   main-color: '#002D8B'
 
 search:
   enable: true
   use: google
+
+theme_mode:
+  switch: true
+  # auto / light / dark
+  default: auto
 
 menu:
   Home: /
