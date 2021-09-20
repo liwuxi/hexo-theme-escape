@@ -116,12 +116,12 @@ $(document).ready(function () {
    * Switch Mode
    */
   $("#switch-mode-btn").click(function() {
-    let value = $('#switch-mode-btn').attr('class').split(' ').filter(item => item !== 'iconfont').toString()
-    console.log(value)
-    $('#switch-mode-btn').attr('class', value === 'icon-moon' ? 'iconfont icon-sun' : 'iconfont icon-moon')
-    $('html').attr('class', value === 'icon-moon' ? 'dark' : '')
-    localStorage.setItem('custom-mode', value === 'icon-moon' ? 'dark' : 'light')
-    console.log(localStorage.getItem('custom-mode'))
+    let value = $('#switch-mode-btn').attr('class').split(' ').filter(item => item !== 'iconfont').toString();
+    console.log(value);
+    $('#switch-mode-btn').attr('class', value === 'icon-moon' ? 'iconfont icon-sun' : 'iconfont icon-moon');
+    $('html').attr('class', value === 'icon-moon' ? 'dark' : '');
+    localStorage.setItem('custom-mode', value === 'icon-moon' ? 'dark' : 'light');
+    console.log(localStorage.getItem('custom-mode'));
   })
 })
 
@@ -132,43 +132,48 @@ function randomColor() {
 
 function setMode() {
   // 判断用户是否自定义过主题
-  const customMode = localStorage.getItem('custom-mode')
-  console.log(customMode)
+  const customMode = localStorage.getItem('custom-mode');
+  console.log(customMode);
   if (customMode) {
-    $('html').attr('class', customMode)
-    $('#switch-mode-btn').attr('class', `iconfont ${customMode === 'dark' ? 'icon-sun' : 'icon-moon'}`)
+    $('html').attr('class', customMode);
+    $('#switch-mode-btn').attr('class', `iconfont ${customMode === 'dark' ? 'icon-sun' : 'icon-moon'}`);
     return
   }
 
-  let className = ''
+  let className = '';
   // 判断当前环境是否支持 CSS 变量
   if (window.matchMedia('(prefers-color-scheme)').matches) {
     // 根据参数自动调整 Icon
-    console.log(window.matchMedia('(prefers-color-scheme: light)'))
+    console.log(window.matchMedia('(prefers-color-scheme: light)'));
     if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-      className = 'icon-moon'
+      className = 'icon-moon';
     } else {
-      className = 'icon-sun'
+      className = 'icon-sun';
     }
-    $("#switch-mode-btn").attr('class', `iconfont ${ className }`)
+    $("#switch-mode-btn").attr('class', `iconfont ${ className }`);
   } else {
     // 使用时间动态调整
     const now = new Date().getHours();
     if (now < 6 || now > 19) {
-      className = 'icon-sun'
+      className = 'icon-sun';
     } else {
-      className = 'icon-moon'
+      className = 'icon-moon';
     }
-    $("#switch-mode-btn").attr('class', `iconfont ${ className }`)
+    $("#switch-mode-btn").attr('class', `iconfont ${ className }`);
   }
 }
 
-function handleSystemModeChange(item) {
-  
+function handleSystemModeChange(event) {
+  let className = '';
+  if (event.matches) {
+    className = 'dark'
+  }
+  $('html').attr('class', className);
+  $('#switch-mode-btn').attr('class', `iconfont ${ className ? 'icon-sun' : 'icon-dark'}`);
 }
 
 const systemModeIsDark = window.matchMedia('(prefers-color-scheme: dark)');
-systemModeIsDark.addEventListener()
+systemModeIsDark.addEventListener('change', handleSystemModeChange);
 
 /**
  * @name scrollSpy
