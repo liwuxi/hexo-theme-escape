@@ -1,10 +1,79 @@
 header
-  height: 600px
-  position: relative
+  width 100vw
+  height 600px
 
   a
     color: title-font-color
     text-decoration: none
+
+  #nav-bar
+    height 56px
+    width 100vw
+    display flex
+    align-items center
+    background linear-gradient(180deg, rgba(244, 244, 244, 0.343724) 0%, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%)
+
+    .nav-bar-container
+      width 1200px
+      margin 0 auto
+      display flex
+      align-items center
+
+      .nav-bar-logo
+        width 38px
+        height 38px
+        margin-right 20px
+
+      .nav-bar-menu
+        display flex
+        height 38px
+        flex 1
+        
+        .nav-bar-left
+          display flex
+          flex 1
+
+          .menu-item-link
+            color: title-font-color
+            text-decoration: none
+            font-size 16px
+            text-shadow 0px 1px 5px font-shadow-color
+            padding 0 20px
+            line-height 38px
+        
+        .nav-bar-right
+          display flex
+          line-height 38px
+
+          .iconfont
+            color #fff
+            font-size 21px
+            cursor pointer
+
+          .search-container
+            display flex
+            margin-right 22px
+
+            #search
+              color: title-font-color
+              text-shadow: 0px 1px 5px font-shadow-color
+
+            .search-form-input
+              height: 25px
+              width: 0px
+              border-radius: 20px
+              box-shadow: 0px 1px 5px font-shadow-color
+              border: none
+              outline: none
+              margin: auto 1em auto 0
+              padding: 0 10px
+              font-size: 0.9em
+              color: font-color-hover
+              display: none
+              transition: all 0.3s
+
+            ::placeholder
+              line-height: 20px
 
   #site-branding
     padding-top: 150px
@@ -20,82 +89,127 @@ header
       font-style: italic
       font-size: 20px
 
-  #navBar
-    position: absolute
-    bottom: 0
-    height: 40px
-    width: 100%
-    display: flex
-    justify-content: center
-    overflow: hidden
+
+
+
+
+
+
+
+@media (max-width: 1280px) 
+  header
+    height 600px
+
+@media (max-width: 1024px)
+  header
+    height 500px
+
+@media (max-width: 768px)
+  header
+    height 400px
+
+@media (max-width: 640px)
+  header
+    height 300px
+
+// header
+//   height: 600px
+//   position: relative
+
+//   a
+//     color: title-font-color
+//     text-decoration: none
+
+//   #site-branding
+//     padding-top: 150px
+//     text-align: center
+//     line-height: 0
+
+//     #site-title
+//       line-height: 50px
+//       font-size: 80px
+//       text-shadow: 1px 1px 0px #FF0000, -1px -1px 0px #0091FF;
+
+//     #site-description
+//       font-style: italic
+//       font-size: 20px
+
+//   #navBar
+//     position: absolute
+//     bottom: 0
+//     height: 40px
+//     width: 100%
+//     display: flex
+//     justify-content: center
+//     overflow: hidden
     
-    li
-      height 40px
-      padding: 0 20px
-      text-align: center
-      display: inline-block
-      transition: .15s ease-in-out
-      border-bottom: 3px solid main-color
+//     li
+//       height 40px
+//       padding: 0 20px
+//       text-align: center
+//       display: inline-block
+//       transition: .15s ease-in-out
+//       border-bottom: 3px solid main-color
 
-      &:hover
-        height: 37px
+//       &:hover
+//         height: 37px
         
-    a
-      display: block
-      font-size: 20px
-      text-shadow: 0px 1px 5px font-shadow-color
-      line-height: 40px
+//     a
+//       display: block
+//       font-size: 20px
+//       text-shadow: 0px 1px 5px font-shadow-color
+//       line-height: 40px
 
-    .search-container
-      position: absolute
-      top: 0
-      right: 1em
-      display: flex
-      height: 40px
-      align-items: center
+//     .search-container
+//       position: absolute
+//       top: 0
+//       right: 1em
+//       display: flex
+//       height: 40px
+//       align-items: center
 
-      #search
-        font-size: 25px
-        color: title-font-color
-        text-shadow: 0px 1px 5px font-shadow-color
-        line-height: 40px
-        cursor: pointer
+//       #search
+//         font-size: 25px
+//         color: title-font-color
+//         text-shadow: 0px 1px 5px font-shadow-color
+//         line-height: 40px
+//         cursor: pointer
 
-      .search-form-input
-        height: 25px
-        width: 0px
-        border-radius: 20px
-        box-shadow: 0px 1px 5px font-shadow-color
-        border: none
-        outline: none
-        margin: auto 1em auto 0
-        padding: 0 10px
-        font-size: 0.9em
-        color: font-color-hover
-        display: none
-        transition: all 0.3s
+//       .search-form-input
+//         height: 25px
+//         width: 0px
+//         border-radius: 20px
+//         box-shadow: 0px 1px 5px font-shadow-color
+//         border: none
+//         outline: none
+//         margin: auto 1em auto 0
+//         padding: 0 10px
+//         font-size: 0.9em
+//         color: font-color-hover
+//         display: none
+//         transition: all 0.3s
 
-      ::placeholder
-        line-height: 20px
+//       ::placeholder
+//         line-height: 20px
         
 
-#article-header
-  position: fixed
-  width: 100%
-  height: 50px
-  z-index: 1
-  display: flex
-  align-items: center
-  text-shadow: 0px 1px 5px font-shadow-color
+// #article-header
+//   position: fixed
+//   width: 100%
+//   height: 50px
+//   z-index: 1
+//   display: flex
+//   align-items: center
+//   text-shadow: 0px 1px 5px font-shadow-color
     
-  .go-back
-    width: 50px
-    height: 50px
-    text-align: center
-    transition: all 0.3s ease
-    &:hover
-      transform: translate(-5px, 0)
+//   .go-back
+//     width: 50px
+//     height: 50px
+//     text-align: center
+//     transition: all 0.3s ease
+//     &:hover
+//       transform: translate(-5px, 0)
 
-    .iconfont
-      font-size: 30px
-      line-height: 50px
+//     .iconfont
+//       font-size: 30px
+//       line-height: 50px
