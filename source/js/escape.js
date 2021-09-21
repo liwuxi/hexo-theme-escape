@@ -164,12 +164,14 @@ function setMode() {
 }
 
 function handleSystemModeChange(event) {
-  let className = '';
-  if (event.matches) {
-    className = 'dark'
+  if (!localStorage.getItem('custom-mode')) {
+    let className = '';
+    if (event.matches) {
+      className = 'dark'
+    }
+    $('html').attr('class', className);
+    $('#switch-mode-btn').attr('class', `iconfont ${ className ? 'icon-sun' : 'icon-dark'}`);
   }
-  $('html').attr('class', className);
-  $('#switch-mode-btn').attr('class', `iconfont ${ className ? 'icon-sun' : 'icon-dark'}`);
 }
 
 const systemModeIsDark = window.matchMedia('(prefers-color-scheme: dark)');
