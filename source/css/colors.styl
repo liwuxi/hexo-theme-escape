@@ -1,32 +1,15 @@
 :root
-  --background-color: white;
+  --background-color: rgb(248, 249, 250);
 
-.dark {
+.dark 
   --background-color: black;
-}
-
-// if hexo-config('theme_mode.default') == 'auto'
-//   @media not all and (prefers-color-scheme: dark)
-//     :root:not([mode="dark"])
-//       --background-color: black;
-
-// if hexo-config('theme_mode.default') == 'auto'
-//   @import '/colors/auto';
-// else if hexo-config('theme_mode.default') == 'light'
-//   @import '/colors/light';
-// else
-//   @import '/colors/dark';
-
-// $main-color = hexo-config('custom.main-color')
-// $main-color = unquote(hexo-config("custom.main-color"))
+  
 
 /*
  * Theme Colors
  */
-// main-color = rgb(0, 45, 139);
-// background-color = rgb(248, 249, 250);
+main-color = rgb(0, 45, 139);
 background-color = var(--background-color);
-dark-background-color = rgb(0, 0, 0);
 
 /*
  * Font Colors
