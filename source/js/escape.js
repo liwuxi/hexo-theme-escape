@@ -151,6 +151,7 @@ function setMode() {
       className = 'icon-sun';
     }
     $("#switch-mode-btn").attr('class', `iconfont ${ className }`);
+    $('html').attr('class', className === 'icon-sun' ? 'dark' : '');
   } else {
     // 使用时间动态调整
     const now = new Date().getHours();
@@ -160,6 +161,7 @@ function setMode() {
       className = 'icon-moon';
     }
     $("#switch-mode-btn").attr('class', `iconfont ${ className }`);
+    $('html').attr('class', className === 'icon-sun' ? 'dark' : '');
   }
 }
 
