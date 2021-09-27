@@ -4,7 +4,29 @@
     <% if (post.thumbnail) { %>
       <img class="thumbnail" src="<%- post.thumbnail %>" alt="post-thumbnail">
     <% } %>
-    <h2 class="title"><%= post.title %></h2>
+    <div class="content">
+      <h2 class="title"><%= post.title %></h2>
+      <div class="excerpt">
+        <% if (post.excerpt != null) { %>
+          <%- post.excerpt %>
+        <% } else { %>
+          <%- post.more.replace(/<\/?.+?\/?>/g, "").substring(0, 100) %>
+        <% } %>
+      </div>
+      <div class="info flex-jsb">
+        <div class="flex-aic">
+          <img class="avatar" src="<%- theme.basic.avatar %>"></img>
+          <span class="label"><%- date(post.date, "YYYY-MM-DD") %>
+            <% if (post.categories && post.categories.length) { %>
+              ·
+              <%- partial('_plugin/common/categories', { item: post }) %>
+            <% } %>
+          </span>
+        </div>
+        <button class="btn">继续阅读</button>
+      </div>
+    </div>
+    <!-- 
     <div class="content">
       <% if (post.excerpt == null) { %>
         <%- post.excerpt %>
@@ -23,7 +45,7 @@
         </span>
       </div>
       <button>继续阅读</button>
-    </div>
+    </div> -->
   </section>
 <% }) %>
 

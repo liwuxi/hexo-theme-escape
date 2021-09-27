@@ -1,133 +1,50 @@
 .posts
   width: 640px
-  background: card-bg-color
-  border-radius: 15px
-  box-shadow: 0px 20px 40px post-shadow
-  box-sizing: border-box
-  margin: 70px auto
+  background: background-content
+  border-radius: border-radius-base
+  box-shadow: 0px 20px 40px shadow-color
   transition: 0.15s ease-in-out
+  margin: 80px auto
+  overflow: hidden
 
   &:hover
     box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1)
     transform: translateY(-2px)
 
-  .post-thumbnail
-    height: 200px
-    border-radius: 15px 15px 0px 0px
-    position: relative
-    background-size: cover
-    background-position: center
-    overflow: hidden
-
-    .post-title
-      position: absolute
-      bottom: 20px
-      left: 20px 
-      text-shadow: 1px 1px black
+  .thumbnail
+    height: 210px
+    cursor: pointer
   
-  .post-title
-    font-size: 20px
-    color: title-font-color
+  .content
+    margin: 12px 20px 20px
 
-  .no-thumbnail
-    color: title-nt-font-color
-    display: block
-    padding: 20px 20px 0
-
-  .post-content
-    padding: 15px 20px
-    color: excerpt-font-color
-    font-size: 15px
-    line-height: 21px
-
-    p
+    .title
+      color: font-color-title
+      font-size: font-size-lg
+      font-weight: 500
+      line-height: font-size-lg
       margin: 0
+      cursor: pointer
 
-  .post-footer
-    padding: 0 20px 15px
-    color: info-font-color
-    font-size: 14px
-    height: 24px
+    .excerpt
+      color: font-color-text
+      font-weight: font-size-base
+      text-align: justify
+      margin: 12px 0
 
-    display: flex
-    justify-content: space-between
-    align-items: center
+      p
+        margin: 0
+
+  .info
+    display flex
 
     .avatar
-      width: 24px
-      height: 24px
-      border-radius: 50%
-      
-    .post-label, .avatar
-      vertical-align: middle
+      width: 28px
+      height: 28px
+      border-radius: border-radius-circle
 
-    a
-      color: info-font-color
-
-    .post-tags-item
-      background: #F5F5F5
-      border-radius: 10px
-      padding: 0 8px
-      transition: 0.15s ease
-
-      &:hover
-        background: main-color
-        color: #FFF
-
-  a
-    text-decoration: none
-
-  hr
-    margin: 20px 20px 0
-    border: 0.5px solid post-shadow
-
-.load-more
-  display: block
-  width: 100px
-  height: 45px
-  background-color: card-bg-color
-  border-radius: 20px
-  box-shadow: 0px 10px 20px post-shadow
-  text-decoration: none
-  text-align: center
-  line-height: 45px
-  margin: 20px auto
-
-  &:hover
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-  
-  i
-    color: main-color
-    font-size: 30px
-
-.paginator
-  width: 640px
-  margin: 0 auto
-  font-size: 15px
-  text-align: center
-
-  a
-    color: main-color
-    text-decoration: none
-  
-  .page-number
-    width: 25px
-    display: inline-block
-    margin: 0 10px
-    background-color: post-shadow
-    text-align: center
-    line-height: 25px
-    border-radius: 5px
-    color: font-color
-    &:hover
-      background-color: card-bg-shadow-color
-
-  .current
-    background-color: main-color
-    color: card-bg-color
-    &:hover
-      background-color: main-color
-
-  .extend
-    margin: 0 10px
+    .label
+      color: font-color-sub
+      font-size: font-size-base
+      line-height: 28px
+      margin-left: 8px

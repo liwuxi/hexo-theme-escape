@@ -1,59 +1,120 @@
 :root
-  --background-color: rgb(248, 249, 250);
-  --post-background-color: rgb(255, 255, 255);
+  --background-color: #F8F9FA;
+  --background-content: #FFFFFF;
+
+  --font-color-title: #505A6E;
+  --font-color-text: #505A6E;
+  --font-color-sub: #ACB3C2;
+  --font-color-inverse: #FFFFFF;
+
+  --button-color-normal: #F5F5F5;
+  --button-color-hover: #002D8B;
+  --button-color-special: #E02020;
+  // --button-color-active: #002D8B;
+
+  --shadow-color: rgba(0, 0, 0, .1);
+  --shadow-color-hover: rgba(0, 0, 0, .15);
+  --shadow-color-inner: rbga(0, 0, 0, .05);
+  --shadow-color-text: rgb(0, 0, 0);
 
 .dark 
-  --background-color: #232222;
-  --post-background-color: rgb(34, 34, 34);
+  --background-color: #1A202C;
+  --background-content: #2E3748;
 
-/*
- * Theme Colors
- */
-main-color = rgb(0, 45, 139);
-background-color = var(--background-color);
-post-background-color = var(--post-background-color);
+  --font-color-title: #EDF2F8;
+  --font-color-text: #A0AEC0;
+  --font-color-sub: #7C8A9E;
+  --font-color-inverse: #FFFFFF;
 
-/*
- * Font Colors
- */
-font-color = rgba(0, 0, 0, .25);
-font-color-hover = rgba(0, 0, 0, .8);
-font-color-grey = rgba(0, 0, 0, .3);
-font-color-inverse = rgb(255, 255, 255);
-font-color-article = rgb(0, 0, 0, .25);
+  --button-color-normal: #1A202C;
+  --button-color-hover: #718096;
+  --button-color-special: #E6FFFA;
+  // --button-color-active: #002D8B;
 
-/*
- * Shadow Colors
- */
-shadow-color = rgba(0, 0, 0, .1);
-shadow-color-hover = rgba(0, 0, 0, .15);
+  --shadow-color: rgba(0, 0, 0, .1);
+  --shadow-color-hover: rgba(0, 0, 0, .15);
+  --shadow-color-inner: rbga(0, 0, 0, .8);
+  --shadow-color-text: rgb(0, 0, 0);
+
 
 /*
  * Background Colors
  */
-article-color = rgb(68, 68, 68);
-code-color = rgb(238, 238, 238);
-hr-color = rgb(221, 221, 221);
-code-bg-color = rgb(1, 22, 39);
+background-page = var(--background-color)
+background-content = var(--background-content)
 
 /*
- * Post Colors
+ * Font Colors
  */
-title-font-color = rgb(255, 255, 255);
-title-nt-font-color = rgb(0, 0, 0);
-title-font-shadow-color = rgb(0, 0, 0);
-excerpt-font-color = rgb(80, 90, 110);
-info-font-color = rgb(172, 179, 194);
+font-color-title = var(--font-color-title)
+font-color-text = var(--font-color-text)
+font-color-sub = var(--font-color-sub)
+font-color-inverse = var(--font-color-inverse)
 
 /*
- * Index Colors
+ * Button Colors
  */
-card-bg-color = rgb(255, 255, 255);
-card-bg-shadow-color = rgba(0, 0, 0, 0.1);
-post-shadow = rgba(0, 0, 0, 0.05);
+button-color-normal = var(--button-color-normal)
+button-color-hover = var(--button-color-hover)
+button-color-special = var(--button-color-special)
+// button-color-active = var(--button-color-active)
 
 /*
- * Plugin Colors
+ * Shadow Colors
  */
-paginator-color = rgba(0, 0, 0, 0.5);
-goup-color = rgb(224, 32, 32);
+shadow-color = var(--shadow-color)
+shadow-color-hover = var(--shadow-color-hover)
+shadow-color-inner = var(--shadow-color-inner)
+shadow-color-text = var(--shadow-color-text)
+
+// /*
+//  * Theme Colors
+//  */
+// main-color = rgb(0, 45, 139);
+// background-color = var(--background-color);
+// post-background-color = var(--post-background-color);
+
+// /*
+//  * Font Colors
+//  */
+// font-color = rgba(0, 0, 0, .25);
+// font-color-hover = rgba(0, 0, 0, .8);
+// font-color-grey = rgba(0, 0, 0, .3);
+// font-color-inverse = rgb(255, 255, 255);
+// font-color-article = rgb(0, 0, 0, .25);
+
+// /*
+//  * Shadow Colors
+//  */
+// shadow-color = rgba(0, 0, 0, .1);
+// shadow-color-hover = rgba(0, 0, 0, .15);
+
+// /*
+//  * Background Colors
+//  */
+// article-color = rgb(68, 68, 68);
+// code-color = rgb(238, 238, 238);
+// hr-color = rgb(221, 221, 221);
+// code-bg-color = rgb(1, 22, 39);
+
+// /*
+//  * Post Colors
+//  */
+// title-font-color = rgb(255, 255, 255);
+// title-nt-font-color = rgb(0, 0, 0);
+// title-font-shadow-color = rgb(0, 0, 0);
+// excerpt-font-color = rgb(80, 90, 110);
+// info-font-color = rgb(172, 179, 194);
+
+// /*
+//  * Index Colors
+//  */
+// card-bg-color = rgb(255, 255, 255);
+// card-bg-shadow-color = rgba(0, 0, 0, 0.1);
+// post-shadow = rgba(0, 0, 0, 0.05);
+
+// /*
+//  * Plugin Colors
+//  */
+// paginator-color = rgba(0, 0, 0, 0.5);
+// goup-color = rgb(224, 32, 32);
