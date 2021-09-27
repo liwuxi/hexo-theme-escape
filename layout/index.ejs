@@ -1,9 +1,30 @@
 <!-- Post List -->
 <% page.posts.each(function (post) { %>
-  <article class="posts">
-    <%- partial('_partial/index/post-card', {post: post}) %>
-    <%- partial('_partial/index/post-info', {post: post}) %>
-  </article>
+  <section class="posts">
+    <% if (post.thumbnail) { %>
+      <img class="thumbnail" src="<%- post.thumbnail %>" alt="post-thumbnail">
+    <% } %>
+    <h2 class="title"><%= post.title %></h2>
+    <div class="content">
+      <% if (post.excerpt == null) { %>
+        <%- post.excerpt %>
+      <% } else { %>
+        <%- post.more.replace(/<\/?.+?\/?>/g, "").substring(0, 100) %>
+      <% } %>
+    </div>
+    <div class="info">
+      <div>
+        <img class="avatar" src="<%- theme.basic.avatar %>"></img>
+        <span class="post-label"><%- date(post.date, "YYYY-MM-DD") %>
+          <% if (post.categories && post.categories.length) { %>
+            ·
+            <%- partial('_plugin/common/categories', {item: post}) %>
+          <% } %>
+        </span>
+      </div>
+      <button>继续阅读</button>
+    </div>
+  </section>
 <% }) %>
 
 <%- partial('_plugin/common/pagination/paginator') %>
