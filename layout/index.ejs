@@ -2,10 +2,14 @@
 <% page.posts.each(function (post) { %>
   <section class="posts">
     <% if (post.thumbnail) { %>
-      <img class="thumbnail" src="<%- post.thumbnail %>" alt="post-thumbnail">
+      <a href="<%- url_for(post.path) %>">
+        <img class="thumbnail" src="<%- post.thumbnail %>" alt="post-thumbnail">
+      </a>
     <% } %>
     <div class="content">
-      <h2 class="title"><%= post.title %></h2>
+      <h2>
+        <a class="title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+      </h2>
       <div class="excerpt">
         <% if (post.excerpt != null) { %>
           <%- post.excerpt %>
@@ -15,7 +19,7 @@
       </div>
       <div class="info flex-jsb">
         <div class="flex-aic">
-          <img class="avatar" src="<%- theme.basic.avatar %>"></img>
+          <img class="avatar" src="<%- theme.basic.avatar %>" alt="author-avatar"></img>
           <span class="label"><%- date(post.date, "YYYY-MM-DD") %>
             <% if (post.categories && post.categories.length) { %>
               ·
@@ -23,29 +27,9 @@
             <% } %>
           </span>
         </div>
-        <button class="btn">继续阅读</button>
+        <a class="read-more" href="<%- url_for(post.path) %>">继续阅读</a>
       </div>
     </div>
-    <!-- 
-    <div class="content">
-      <% if (post.excerpt == null) { %>
-        <%- post.excerpt %>
-      <% } else { %>
-        <%- post.more.replace(/<\/?.+?\/?>/g, "").substring(0, 100) %>
-      <% } %>
-    </div>
-    <div class="info">
-      <div>
-        <img class="avatar" src="<%- theme.basic.avatar %>"></img>
-        <span class="post-label"><%- date(post.date, "YYYY-MM-DD") %>
-          <% if (post.categories && post.categories.length) { %>
-            ·
-            <%- partial('_plugin/common/categories', {item: post}) %>
-          <% } %>
-        </span>
-      </div>
-      <button>继续阅读</button>
-    </div> -->
   </section>
 <% }) %>
 
