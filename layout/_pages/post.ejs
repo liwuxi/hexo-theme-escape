@@ -6,9 +6,9 @@
   <%- partial('_partial/post/article-info') %>
 </div>
 <article id="article">
-  <%- partial('_plugin/common/toc') %>
+  <%- partial('_components/toc') %>
   <%- page.content %>
   <%- partial('_partial/post/article-footer') %>
 </article>
-<%- partial('_plugin/common/pagination/post-paginator') %>
+<%- partial('_components/pagination/post-paginator') %>
 <%- partial('_plugin/comment/' + theme.comment.use + '/main') %>

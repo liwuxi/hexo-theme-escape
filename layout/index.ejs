@@ -23,7 +23,7 @@
           <span class="label"><%- date(post.date, "YYYY-MM-DD") %>
             <% if (post.categories && post.categories.length) { %>
               ·
-              <%- partial('_plugin/common/categories', { item: post }) %>
+              <%- partial('_components/categories', { item: post }) %>
             <% } %>
           </span>
         </div>
@@ -33,4 +33,4 @@
   </section>
 <% }) %>
 
-<%- partial('_plugin/common/pagination/paginator') %>
+<%- partial('_components/pagination/paginator') %>

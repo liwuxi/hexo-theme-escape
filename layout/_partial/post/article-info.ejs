@@ -3,7 +3,7 @@
     <h1 class="article-title"><%= page.title %></h1>
 
     <% if (page.categories && page.categories.length){ %>
-      <span><%- partial('_plugin/common/categories', {item: page}) %></span>
+      <span><%- partial('_components/categories', {item: page}) %></span>
     <% } %>
     <span><%- date(page.date, "YYYY-MM-DD") %> </span>
     <% if (theme.comment.use === 'disqus') { %>
